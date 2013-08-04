@@ -96,11 +96,12 @@
       <Query>
         <DataSourceName>Adgroup_SeperiaDWH</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@MySession">
-            <Value>=Parameters!MySession.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="@Account_id">
             <Value>=Parameters!Account_id.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="@MySession">
+            <Value>=Parameters!MySession.Value</Value>
             <rd:UserDefined>true</rd:UserDefined>
           </QueryParameter>
         </QueryParameters>
@@ -664,7 +665,7 @@
             <DataSetName>Seperia_dwh</DataSetName>
             <Top>0.88195in</Top>
             <Height>0.5in</Height>
-            <Width>8.05208in</Width>
+            <Width>8.05209in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

@@ -39,6 +39,10 @@
       <FullPath>AD ALERT REPORT-TEST.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>AD GROUP ALERT REPORT.rdl</Name>
+      <FullPath>AD GROUP ALERT REPORT.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>AD GROUP NEGATIVE TREND - LAST 3 MONTHS.rdl</Name>
       <FullPath>AD GROUP NEGATIVE TREND - LAST 3 MONTHS.rdl</FullPath>
     </ProjectItem>
@@ -57,10 +61,6 @@
     <ProjectItem>
       <Name>CAMPAIGN_ALERTS_REPORT.rdl</Name>
       <FullPath>CAMPAIGN_ALERTS_REPORT.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>AD GROUP ALERT REPORT.rdl</Name>
-      <FullPath>AD GROUP ALERT REPORT.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -109,7 +109,7 @@
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
         <TargetServerURL>http://localhost/ReportServer</TargetServerURL>
-        <TargetFolder>AD GROUP ALERT REPORT</TargetFolder>
+        <TargetFolder>SandBox</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <TargetDatasetFolder>Datasets</TargetDatasetFolder>
         <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
