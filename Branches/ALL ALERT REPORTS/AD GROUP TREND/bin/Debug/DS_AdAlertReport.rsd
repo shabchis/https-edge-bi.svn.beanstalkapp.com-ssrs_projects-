@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="DS_AdAlertReport">
+    <Query>
+      <DataSourceReference>Seperia_DWH</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@CPAThreshold">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+        </DataSetParameter>
+        <DataSetParameter Name="@Account_ID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@AdgroupSpent">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+        </DataSetParameter>
+        <DataSetParameter Name="@DaysNum">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@CPRThreshold">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>exec AD_Alert_Report @Account_ID, @DaysNum, @CPAThreshold , @CPRThreshold, @AdgroupSpent</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+    <Fields>
+      <Field Name="ID_Measures___Weight_">
+        <DataField>[Measures].[Weight]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Paid_Creatives_Dim___Creatives___Account___MEMBER_CAPTION_">
+        <DataField>[Paid Creatives Dim].[Creatives].[Account].[MEMBER_CAPTION]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Paid_Creatives_Dim___Creatives___Campaign___MEMBER_CAPTION_">
+        <DataField>[Paid Creatives Dim].[Creatives].[Campaign].[MEMBER_CAPTION]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___AdGroup_Weight_">
+        <DataField>[Measures].[AdGroup_Weight]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Indicator_">
+        <DataField>[Measures].[Indicator]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Paid_Creatives_Dim___Creatives___Ad_Group___MEMBER_CAPTION_">
+        <DataField>[Paid Creatives Dim].[Creatives].[Ad Group].[MEMBER_CAPTION]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Actives_Calc_">
+        <DataField>[Measures].[Actives_Calc]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Cost_">
+        <DataField>[Measures].[Cost]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Paid_Creatives_Dim___Creatives___Creative___MEMBER_CAPTION_">
+        <DataField>[Paid Creatives Dim].[Creatives].[Creative].[MEMBER_CAPTION]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___CPA_Calc_">
+        <DataField>[Measures].[CPA_Calc]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___CPR_Calc_">
+        <DataField>[Measures].[CPR_Calc]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Regs_Calc_">
+        <DataField>[Measures].[Regs_Calc]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___7__of_AdGroup_">
+        <DataField>[Measures].[7% of AdGroup]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Sum_of_ADgroup_cost_">
+        <DataField>[Measures].[Sum of ADgroup_cost]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Sum_of_ADgroup_">
+        <DataField>[Measures].[Sum of ADgroup]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___0_1__of_Account_">
+        <DataField>[Measures].[0.1% of Account]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Sum_of_Account_">
+        <DataField>[Measures].[Sum of Account]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Best_CPA_">
+        <DataField>[Measures].[Best_CPA]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Best_CPR_">
+        <DataField>[Measures].[Best_CPR]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___CPA_of_ADgroup_">
+        <DataField>[Measures].[CPA of ADgroup]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___CPR_of_ADgroup_">
+        <DataField>[Measures].[CPR of ADgroup]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Actives_of_ADgroup_">
+        <DataField>[Measures].[Actives of ADgroup]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

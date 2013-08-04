@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="POSITIVE_TREND">
+    <Query>
+      <DataSourceReference>Seperia_DWH</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@Account_ID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@pFour">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+        </DataSetParameter>
+        <DataSetParameter Name="@pDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>exec [Seperia_DWH].[dbo].[Adgroup_Positive_Trend_Alert] @Account_ID,@pDate, @pFour</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="ID_Measures___Week_1_">
+        <DataField>[Measures].[Week_1]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Paid_Creatives_Dim___Creatives___Account___MEMBER_CAPTION_">
+        <DataField>[Paid Creatives Dim].[Creatives].[Account].[MEMBER_CAPTION]</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="ID_Paid_Creatives_Dim___Creatives___Campaign___MEMBER_CAPTION_">
+        <DataField>[Paid Creatives Dim].[Creatives].[Campaign].[MEMBER_CAPTION]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Week_2_">
+        <DataField>[Measures].[Week_2]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Paid_Creatives_Dim___Creatives___Ad_Group___MEMBER_CAPTION_">
+        <DataField>[Paid Creatives Dim].[Creatives].[Ad Group].[MEMBER_CAPTION]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Week_3_">
+        <DataField>[Measures].[Week_3]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Week_4_">
+        <DataField>[Measures].[Week_4]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Measures___Weight_">
+        <DataField>[Measures].[Weight]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
