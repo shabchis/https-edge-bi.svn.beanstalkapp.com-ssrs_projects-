@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="DS_RegFieldName">
+    <Query>
+      <DataSourceReference>Seperia_DWH</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@Account_ID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT     MDX_Name
+FROM         Seperia.dbo.Measure
+WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 5)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="MDX_Name">
+        <DataField>MDX_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
