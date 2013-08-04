@@ -1773,7 +1773,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="Defined Time Period: " + format(DateAdd("d" , - Parameters!DaysNum.Value-1, Now()), "dd/MM/yyyy")+ " - " + format(dateadd("d",-1,Now()), "dd/MM/yyyy")+ " - ("+ Parameters!DaysNum.Value+") Days"</Value>
+                    <Value>="Defined Time Period: " + format(DateAdd("d" , - Parameters!DaysNum.Value-1, Now()), "dd/MM/yyyy")+ " - " + format(dateadd("d",-2,Now()), "dd/MM/yyyy")+ " - ("+ Parameters!DaysNum.Value+") Days"</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>

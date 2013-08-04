@@ -20,15 +20,19 @@
       <Name>POSITIVE_TREND.rsd</Name>
       <FullPath>POSITIVE_TREND.rsd</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Seperia_dwh.rsd</Name>
+      <FullPath>Seperia_dwh.rsd</FullPath>
+    </ProjectItem>
   </DataSets>
   <Reports>
     <ProjectItem>
-      <Name>AD ALERT REPORT_DEV.rdl</Name>
-      <FullPath>AD ALERT REPORT_DEV.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>AD ALERT REPORT.rdl</Name>
       <FullPath>AD ALERT REPORT.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AD ALERT REPORT_DEV.rdl</Name>
+      <FullPath>AD ALERT REPORT_DEV.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>AD ALERT REPORT-TEST.rdl</Name>
@@ -53,6 +57,10 @@
     <ProjectItem>
       <Name>CAMPAIGN_ALERTS_REPORT.rdl</Name>
       <FullPath>CAMPAIGN_ALERTS_REPORT.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AD GROUP ALERT REPORT.rdl</Name>
+      <FullPath>AD GROUP ALERT REPORT.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -93,6 +101,34 @@
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <TargetDatasetFolder>Datasets</TargetDatasetFolder>
         <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <OutputPath>bin\Debug</OutputPath>
+        <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+        <TargetServerURL>http://localhost/ReportServer</TargetServerURL>
+        <TargetFolder>AD GROUP ALERT REPORT</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+        <OverwriteDatasets>true</OverwriteDatasets>
+        <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+        <StartItem>AD GROUP TREND.rdl</StartItem>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Production</Name>
+      <Options>
+        <OutputPath>bin\Debug</OutputPath>
+        <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+        <TargetServerURL>http://localhost/ReportServer</TargetServerURL>
+        <TargetFolder>ALERT REPORTS</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+        <OverwriteDatasets>true</OverwriteDatasets>
+        <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+        <StartItem>AD GROUP TREND.rdl</StartItem>
       </Options>
     </Configuration>
   </Configurations>
