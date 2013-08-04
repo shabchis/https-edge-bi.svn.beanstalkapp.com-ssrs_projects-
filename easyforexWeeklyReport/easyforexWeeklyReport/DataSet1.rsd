@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="FromTimeDimDayCode">
+          <DefaultValue />
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="ToTimeDimDayCode">
+          <DefaultValue />
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText> SELECT NON EMPTY { [Measures].[SAT], [Measures].[Cost/Active], [Measures].[New Leads], [Measures].[Cost/Reg], [Measures].[% Actives/Regs], [Measures].[Regs], [Measures].[Actives] } ON COLUMNS, NON EMPTY { ([Getways Dim].[Region].[Region].ALLMEMBERS * [Getways Dim].[Gateways].[Gateway].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOMEMBER(@FromTimeDimDayCode, CONSTRAINED) : STRTOMEMBER(@ToTimeDimDayCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Accounts Dim].[Accounts].[Client].&amp;[7] } ) ON COLUMNS FROM [BOEasyForex2])) WHERE ( [Accounts Dim].[Accounts].[Client].&amp;[7] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Getways Dim</DimensionName><HierarchyName>Region</HierarchyName><HierarchyUniqueName>[Getways Dim].[Region]</HierarchyUniqueName><LevelName>Region</LevelName><UniqueName>[Getways Dim].[Region].[Region]</UniqueName></ID><ItemCaption>Region</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Getways Dim</DimensionName><HierarchyName>Gateways</HierarchyName><HierarchyUniqueName>[Getways Dim].[Gateways]</HierarchyUniqueName><LevelName>Campaign</LevelName><UniqueName>[Getways Dim].[Gateways].[Campaign]</UniqueName></ID><ItemCaption>Campaign</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Getways Dim</DimensionName><HierarchyName>Gateways</HierarchyName><HierarchyUniqueName>[Getways Dim].[Gateways]</HierarchyUniqueName><LevelName>Ad Group</LevelName><UniqueName>[Getways Dim].[Gateways].[Ad Group]</UniqueName></ID><ItemCaption>Ad Group</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Getways Dim</DimensionName><HierarchyName>Gateways</HierarchyName><HierarchyUniqueName>[Getways Dim].[Gateways]</HierarchyUniqueName><LevelName>Gateway</LevelName><UniqueName>[Getways Dim].[Gateways].[Gateway]</UniqueName></ID><ItemCaption>Gateway</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Actives</MeasureName><UniqueName>[Measures].[Actives]</UniqueName></ID><ItemCaption>Actives</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Regs</MeasureName><UniqueName>[Measures].[Regs]</UniqueName></ID><ItemCaption>Regs</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>SAT</MeasureName><UniqueName>[Measures].[SAT]</UniqueName></ID><ItemCaption>SAT</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>New Leads</MeasureName><UniqueName>[Measures].[New Leads]</UniqueName></ID><ItemCaption>New Leads</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>% Actives/Regs</MeasureName><UniqueName>[Measures].[% Actives/Regs]</UniqueName></ID><ItemCaption>% Actives/Regs</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost/Reg</MeasureName><UniqueName>[Measures].[Cost/Reg]</UniqueName></ID><ItemCaption>Cost/Reg</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost/Active</MeasureName><UniqueName>[Measures].[Cost/Active]</UniqueName></ID><ItemCaption>Cost/Active</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>BOEasyForex2</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Accounts Dim].[Accounts]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Accounts Dim].[Accounts].[Client].&amp;[7]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time Dim].[DayCode]</HierarchyUniqueName><Condition xsi:type="Range"><Basis>Member</Basis><From /><FromParametrized>true</FromParametrized><To /><ToParametrized>true</ToParametrized></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[SAT], [Measures].[Cost/Active], [Measures].[New Leads], [Measures].[Cost/Reg], [Measures].[% Actives/Regs], [Measures].[Regs], [Measures].[Actives] } ON COLUMNS, NON EMPTY { ([Getways Dim].[Region].[Region].ALLMEMBERS * [Getways Dim].[Gateways].[Gateway].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOMEMBER(@FromTimeDimDayCode, CONSTRAINED) : STRTOMEMBER(@ToTimeDimDayCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Accounts Dim].[Accounts].[Client].&amp;[7] } ) ON COLUMNS FROM [BOEasyForex2])) WHERE ( [Accounts Dim].[Accounts].[Client].&amp;[7] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>FromTimeDimDayCode</Name><Usage>RangeFrom</Usage><DefaultValues><DefaultValue /></DefaultValues><Caption>From DayCode</Caption><HierarchyUniqueName>[Time Dim].[DayCode]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Time Dim].[DayCode].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Time Dim].[DayCode].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Time Dim].[DayCode].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time Dim].[DayCode].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Accounts Dim].[Accounts].[Client].&amp;[7] } ) ON COLUMNS FROM [BOEasyForex2])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition><ParameterDefinition><Name>ToTimeDimDayCode</Name><Usage>RangeTo</Usage><DefaultValues><DefaultValue /></DefaultValues><Caption>To DayCode</Caption><HierarchyUniqueName>[Time Dim].[DayCode]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Time Dim].[DayCode].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Time Dim].[DayCode].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Time Dim].[DayCode].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time Dim].[DayCode].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Accounts Dim].[Accounts].[Client].&amp;[7] } ) ON COLUMNS FROM [BOEasyForex2])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Region">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Getways Dim].[Region].[Region]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Campaign">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Getways Dim].[Gateways].[Campaign]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Ad_Group">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Getways Dim].[Gateways].[Ad Group]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Gateway">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Getways Dim].[Gateways].[Gateway]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Actives">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actives]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Regs">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Regs]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="SAT">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[SAT]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="New_Leads">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[New Leads]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Cost_Reg">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost/Reg]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ID__Actives_Regs">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[% Actives/Regs]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Cost_Active">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost/Active]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
