@@ -1637,7 +1637,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>DS_AdAlertReport</DataSetName>
-            <Top>0.78695in</Top>
+            <Top>0.77306in</Top>
             <Left>0.19667in</Left>
             <Height>0.48209in</Height>
             <Width>18in</Width>
@@ -1715,7 +1715,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox19</rd:DefaultName>
-            <Top>0.25in</Top>
+            <Top>0.23611in</Top>
             <Left>0.19667in</Left>
             <Height>0.20833in</Height>
             <Width>2.61458in</Width>
@@ -1773,7 +1773,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="Defined Time Period: " + format(DateAdd("d" , - Parameters!DaysNum.Value-1, Now()), "dd/MM/yyyy")+ " - " + format(dateadd("d",-2,Now()), "dd/MM/yyyy")+ " - ("+ Parameters!DaysNum.Value+") Days"</Value>
+                    <Value>="Defined Time Period: " + format(DateAdd("d" , - Parameters!DaysNum.Value, Now()), "dd/MM/yyyy")+ " - " + format(dateadd("d",-1,Now()), "dd/MM/yyyy")+ " - ("+ Parameters!DaysNum.Value+") Days"</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>

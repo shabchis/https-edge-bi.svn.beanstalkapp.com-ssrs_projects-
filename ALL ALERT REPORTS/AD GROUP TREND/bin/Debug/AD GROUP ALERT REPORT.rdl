@@ -92,6 +92,28 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="DS_IsValid">
+      <Query>
+        <DataSourceName>Adgroup_SeperiaDWH</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@MySession">
+            <Value>=Parameters!MySession.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Account_id">
+            <Value>=Parameters!Account_id.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>DECLARE @result varchar(max) EXECUTE [dbo].[Validate_Report] N'alerts/ad', @MySession, @Account_id, 555 SELECT     @result</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="ID">
+          <DataField />
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -714,7 +736,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="Defined Time Period: " + format(DateAdd("d" , - Parameters!Period.Value-1, Now()), "dd/MM/yyyy")+ " - " + format(dateadd("d",-1,Now()), "dd/MM/yyyy")+ " - ("+ Parameters!Period.Value+") Days"</Value>
+                    <Value>="Defined Time Period: " + format(DateAdd("d" , - Parameters!Period.Value, Now()), "dd/MM/yyyy")+ " - " + format(dateadd("d",-1,Now()), "dd/MM/yyyy")+ " - ("+ Parameters!Period.Value+") Days"</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -737,6 +759,43 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox126">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>No valid session or permission</Value>
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <Color>Brown</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox126</rd:DefaultName>
+            <Top>0.47222in</Top>
+            <Left>3.86458in</Left>
+            <Height>0.30292in</Height>
+            <Width>3.13542in</Width>
+            <ZIndex>4</ZIndex>
+            <Visibility>
+              <Hidden>=iif(Parameters!Validation.Value =-2,false,true)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>2.04861in</Height>
         <Style />
@@ -744,7 +803,7 @@
       <Width>20.22572in</Width>
       <Page>
         <PageHeader>
-          <Height>0.4375in</Height>
+          <Height>0.49305in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -755,7 +814,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>ADGROUP ALERTS REPORT</Value>
+                      <Value>Ad Group Alerts Report</Value>
                       <Style>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>18pt</FontSize>
@@ -816,7 +875,7 @@
           <Value>7</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Account ID</Prompt>
+      <Prompt>Account_id</Prompt>
     </ReportParameter>
     <ReportParameter Name="Period">
       <DataType>String</DataType>
@@ -856,6 +915,22 @@
         </Values>
       </DefaultValue>
       <Prompt>To Day</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MySession">
+      <DataType>String</DataType>
+      <Prompt>MySession</Prompt>
+      <UsedInQuery>True</UsedInQuery>
+    </ReportParameter>
+    <ReportParameter Name="Validation">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>DS_IsValid</DataSetName>
+          <ValueField>ID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Validation</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>

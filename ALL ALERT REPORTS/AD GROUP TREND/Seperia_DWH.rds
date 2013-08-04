@@ -3,7 +3,6 @@
   <ConnectionProperties>
     <Extension>SQL</Extension>
     <ConnectString>Data Source=.;Initial Catalog=Seperia_DWH</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>e12bf80a-9c5c-4c4b-b830-b85c700925ce</DataSourceID>
 </RptDataSource>

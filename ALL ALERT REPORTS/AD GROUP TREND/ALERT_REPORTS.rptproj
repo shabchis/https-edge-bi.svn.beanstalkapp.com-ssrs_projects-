@@ -112,7 +112,6 @@
         <TargetFolder>AD GROUP ALERT REPORT</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <TargetDatasetFolder>Datasets</TargetDatasetFolder>
-        <OverwriteDatasets>true</OverwriteDatasets>
         <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
         <StartItem>AD GROUP TREND.rdl</StartItem>
       </Options>
@@ -126,7 +125,6 @@
         <TargetFolder>ALERT REPORTS</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <TargetDatasetFolder>Datasets</TargetDatasetFolder>
-        <OverwriteDatasets>true</OverwriteDatasets>
         <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
         <StartItem>AD GROUP TREND.rdl</StartItem>
       </Options>
