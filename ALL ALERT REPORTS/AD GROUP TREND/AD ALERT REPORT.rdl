@@ -1662,7 +1662,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>  AD ALERT REPORT</Value>
+                    <Value>  Ad Alerts Report</Value>
                     <Style>
                       <FontFamily>Tahoma</FontFamily>
                       <FontSize>18pt</FontSize>
