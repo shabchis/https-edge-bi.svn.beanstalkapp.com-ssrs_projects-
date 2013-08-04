@@ -7,6 +7,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Default = Debug|Default
 		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
 		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -15,6 +16,8 @@ Global
 		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Debug|Default.Deploy.0 = DebugLocal
 		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.DebugLocal|Default.ActiveCfg = DebugLocal
 		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.DebugLocal|Default.Build.0 = DebugLocal
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Production|Default.ActiveCfg = Production
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Production|Default.Deploy.0 = Production
 		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Release|Default.ActiveCfg = Release
 		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Release|Default.Build.0 = Release
 		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Release|Default.Deploy.0 = Release
