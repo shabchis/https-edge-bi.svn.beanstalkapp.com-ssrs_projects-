@@ -1973,7 +1973,6 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
     <ReportParameter Name="MySession">
       <DataType>String</DataType>
       <Prompt>MySession</Prompt>
-      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="Validation">
       <DataType>String</DataType>
