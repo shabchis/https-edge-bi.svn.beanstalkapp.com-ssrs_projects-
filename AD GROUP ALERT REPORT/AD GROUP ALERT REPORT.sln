@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "AD GROUP ALERT REPORT", "AD GROUP ALERT REPORT\AD GROUP ALERT REPORT.rptproj", "{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Debug|Default.ActiveCfg = Debug
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Debug|Default.Build.0 = DebugLocal
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Debug|Default.Deploy.0 = DebugLocal
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.DebugLocal|Default.Build.0 = DebugLocal
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Release|Default.ActiveCfg = Release
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Release|Default.Build.0 = Release
+		{D7F8D2DE-6C82-425A-AF2F-7969F57F56B4}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
