@@ -62,6 +62,10 @@
       <Name>CAMPAIGN_ALERTS_REPORT.rdl</Name>
       <FullPath>CAMPAIGN_ALERTS_REPORT.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Campaign_Alerts_Report_Using_CLR.rdl</Name>
+      <FullPath>Campaign_Alerts_Report_Using_CLR.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
