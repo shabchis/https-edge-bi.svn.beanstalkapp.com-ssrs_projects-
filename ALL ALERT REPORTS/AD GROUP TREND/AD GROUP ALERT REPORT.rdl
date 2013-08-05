@@ -124,10 +124,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>2.23958in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.87499in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1in</Width>
@@ -664,8 +664,9 @@
             </TablixRowHierarchy>
             <DataSetName>Seperia_dwh</DataSetName>
             <Top>0.88195in</Top>
+            <Left>0.33333in</Left>
             <Height>0.5in</Height>
-            <Width>8.05209in</Width>
+            <Width>10.16667in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -688,6 +689,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
             <Top>0.06944in</Top>
+            <Left>0.33333in</Left>
             <Height>0.25in</Height>
             <Width>3.33333in</Width>
             <ZIndex>1</ZIndex>
@@ -717,6 +719,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
             <Top>0.47222in</Top>
+            <Left>0.33333in</Left>
             <Height>0.25in</Height>
             <Width>3.33333in</Width>
             <ZIndex>2</ZIndex>
@@ -746,7 +749,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Top>0.06944in</Top>
-            <Left>3.66667in</Left>
+            <Left>4in</Left>
             <Height>0.25in</Height>
             <Width>5.89583in</Width>
             <ZIndex>3</ZIndex>
@@ -780,7 +783,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox126</rd:DefaultName>
             <Top>0.47222in</Top>
-            <Left>3.86458in</Left>
+            <Left>4.19791in</Left>
             <Height>0.30292in</Height>
             <Width>3.13542in</Width>
             <ZIndex>4</ZIndex>
@@ -872,6 +875,7 @@
     <ReportParameter Name="Account_id">
       <DataType>String</DataType>
       <Prompt>Account_id</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="Period">
       <DataType>String</DataType>
@@ -911,6 +915,7 @@
         </Values>
       </DefaultValue>
       <Prompt>To Day</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="MySession">
       <DataType>String</DataType>

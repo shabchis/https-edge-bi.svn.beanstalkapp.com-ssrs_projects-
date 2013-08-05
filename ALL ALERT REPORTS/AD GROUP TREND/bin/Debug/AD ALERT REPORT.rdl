@@ -1442,7 +1442,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1in</Size>
+                    <Size>1.85416in</Size>
                     <CellContents>
                       <Textbox Name="Textbox357">
                         <CanGrow>true</CanGrow>
@@ -1483,7 +1483,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1in</Size>
+                        <Size>1.22917in</Size>
                         <CellContents>
                           <Textbox Name="Textbox353">
                             <CanGrow>true</CanGrow>
@@ -1543,7 +1543,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>1in</Size>
+                    <Size>1.85416in</Size>
                     <CellContents>
                       <Textbox Name="ID_Paid_Creatives_Dim___Creatives___Campaign___MEMBER_CAPTION_">
                         <CanGrow>true</CanGrow>
@@ -1581,7 +1581,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1in</Size>
+                        <Size>1.22917in</Size>
                         <CellContents>
                           <Textbox Name="ID_Paid_Creatives_Dim___Creatives___Ad_Group___MEMBER_CAPTION_">
                             <CanGrow>true</CanGrow>
@@ -1640,7 +1640,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
             <Top>0.77306in</Top>
             <Left>0.19667in</Left>
             <Height>0.48209in</Height>
-            <Width>18in</Width>
+            <Width>19.08333in</Width>
             <Visibility>
               <Hidden>=iif(Parameters!Validation.Value =1,false,true)</Hidden>
             </Visibility>
@@ -1926,12 +1926,8 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
   <ReportParameters>
     <ReportParameter Name="Account_ID">
       <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>7</Value>
-        </Values>
-      </DefaultValue>
       <Prompt>Account ID</Prompt>
+      <Hidden>true</Hidden>
       <UsedInQuery>True</UsedInQuery>
     </ReportParameter>
     <ReportParameter Name="DaysNum">
@@ -1973,6 +1969,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
     <ReportParameter Name="MySession">
       <DataType>String</DataType>
       <Prompt>MySession</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="Validation">
       <DataType>String</DataType>
@@ -1983,6 +1980,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
         </DataSetReference>
       </DefaultValue>
       <Prompt>ReportParameter1</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <EmbeddedImages>
