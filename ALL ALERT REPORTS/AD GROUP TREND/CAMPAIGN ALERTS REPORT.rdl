@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>2.36979in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.14062in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.75521in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.68229in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.88021in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.72396in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -473,8 +473,9 @@
         </TablixRowHierarchy>
         <DataSetName>DS_Campaign</DataSetName>
         <Top>0.04167in</Top>
+        <Left>0.26042in</Left>
         <Height>0.5in</Height>
-        <Width>6in</Width>
+        <Width>10.55208in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -482,13 +483,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.04861in</Height>
     <Style />
   </Body>
-  <Width>6.88542in</Width>
+  <Width>20.22572in</Width>
   <Page>
     <PageHeader>
-      <Height>0.88542in</Height>
+      <Height>0.89931in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -540,6 +541,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
           <Top>0.45486in</Top>
+          <Left>0.26042in</Left>
           <Height>0.25in</Height>
           <Width>2in</Width>
           <ZIndex>1</ZIndex>
@@ -569,10 +571,47 @@
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
           <Top>0.45486in</Top>
-          <Left>2.4375in</Left>
+          <Left>2.69792in</Left>
           <Height>0.25in</Height>
           <Width>3.66667in</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox126">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>No valid session or permission</Value>
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontSize>16pt</FontSize>
+                    <Color>Brown</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox126</rd:DefaultName>
+          <Top>0.59639in</Top>
+          <Left>2in</Left>
+          <Height>0.30292in</Height>
+          <Width>3.13542in</Width>
+          <ZIndex>3</ZIndex>
+          <Visibility>
+            <Hidden>=iif(Parameters!Validation.Value =-2,false,true)</Hidden>
+          </Visibility>
           <Style>
             <Border>
               <Style>None</Style>
@@ -684,6 +723,31 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="DS_IsValid">
+      <Query>
+        <DataSourceName>Campaign_DataSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@MySession">
+            <Value>=Parameters!MySession.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Account_ID">
+            <Value>=Parameters!AccountID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>declare @result varchar(max) 
+
+EXECUTE   [dbo].[Validate_Report]  N'alerts/ad', @MySession, @Account_ID, 555
+  
+
+select @result</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ID">
+          <DataField />
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportParameters>
     <ReportParameter Name="AccountID">
@@ -718,6 +782,20 @@
         </Values>
       </DefaultValue>
       <Prompt>To Day</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MySession">
+      <DataType>String</DataType>
+      <Prompt>Session</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Validation">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>DS_IsValid</DataSetName>
+          <ValueField>ID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Validation</Prompt>
     </ReportParameter>
   </ReportParameters>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>

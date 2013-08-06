@@ -31,40 +31,12 @@
       <FullPath>AD ALERT REPORT.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>AD ALERT REPORT_DEV.rdl</Name>
-      <FullPath>AD ALERT REPORT_DEV.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>AD ALERT REPORT-TEST.rdl</Name>
-      <FullPath>AD ALERT REPORT-TEST.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>AD GROUP ALERT REPORT.rdl</Name>
       <FullPath>AD GROUP ALERT REPORT.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>AD GROUP NEGATIVE TREND - LAST 3 MONTHS.rdl</Name>
-      <FullPath>AD GROUP NEGATIVE TREND - LAST 3 MONTHS.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>AD GROUP NEGATIVE TREND ALERT.rdl</Name>
-      <FullPath>AD GROUP NEGATIVE TREND ALERT.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>AD GROUP POSITIVE TREND - LAST 3 MONTHS.rdl</Name>
-      <FullPath>AD GROUP POSITIVE TREND - LAST 3 MONTHS.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>AD GROUP POSITIVE TREND.rdl</Name>
-      <FullPath>AD GROUP POSITIVE TREND.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>CAMPAIGN_ALERTS_REPORT.rdl</Name>
-      <FullPath>CAMPAIGN_ALERTS_REPORT.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Campaign_Alerts_Report_Using_CLR.rdl</Name>
-      <FullPath>Campaign_Alerts_Report_Using_CLR.rdl</FullPath>
+      <Name>CAMPAIGN ALERTS REPORT.rdl</Name>
+      <FullPath>CAMPAIGN ALERTS REPORT.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
