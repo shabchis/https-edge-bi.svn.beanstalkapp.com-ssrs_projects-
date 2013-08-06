@@ -14,7 +14,7 @@
         <DataSourceName>Adgroup_SeperiaDWH</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@AccountID">
-            <Value>=Parameters!Account_id.Value</Value>
+            <Value>=Parameters!Account_ID.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@Period">
             <Value>=Parameters!Period.Value</Value>
@@ -29,7 +29,8 @@
             <Value>=Parameters!ToDay.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>EXEC ADGROUP_Alerts_Report @AccountID, @Period, @CPR_threshold, @CPA_threshold, @ToDay</CommandText>
+        <CommandText>EXEC Adgroup_Alert_Report_ssrs
+@AccountID, @Period, @CPR_threshold, @CPA_threshold, @ToDay</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
@@ -68,7 +69,7 @@
         <DataSourceName>Adgroup_SeperiaDWH</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@Account_ID">
-            <Value>=Parameters!Account_id.Value</Value>
+            <Value>=Parameters!Account_ID.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandText>exec SP_GetAcqAndCpaFieldsNamesByAccountID @Account_ID</CommandText>
@@ -97,7 +98,7 @@
         <DataSourceName>Adgroup_SeperiaDWH</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@Account_id">
-            <Value>=Parameters!Account_id.Value</Value>
+            <Value>=Parameters!Account_ID.Value</Value>
             <rd:UserDefined>true</rd:UserDefined>
           </QueryParameter>
           <QueryParameter Name="@MySession">
@@ -821,26 +822,12 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Ad Group Alerts Report</Value>
+                      <Value>Ad Group Alerts</Value>
                       <Style>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <Color>#90b63d</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value />
-                      <Style>
-                        <FontFamily>Tahoma</FontFamily>
-                        <FontSize>18pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>#365838</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -875,7 +862,7 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="Account_id">
+    <ReportParameter Name="Account_ID">
       <DataType>String</DataType>
       <Prompt>Account_id</Prompt>
       <Hidden>true</Hidden>
@@ -884,10 +871,10 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>30</Value>
+          <Value>3</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Period</Prompt>
+      <Prompt>Defined Time Period:</Prompt>
       <UsedInQuery>True</UsedInQuery>
     </ReportParameter>
     <ReportParameter Name="CPR_threshold">
@@ -897,7 +884,7 @@
           <Value>2</Value>
         </Values>
       </DefaultValue>
-      <Prompt>CPR threshold</Prompt>
+      <Prompt>Defined CPR Threshold:</Prompt>
       <UsedInQuery>True</UsedInQuery>
     </ReportParameter>
     <ReportParameter Name="CPA_threshold">
@@ -907,7 +894,7 @@
           <Value>1.5</Value>
         </Values>
       </DefaultValue>
-      <Prompt>CPA threshold</Prompt>
+      <Prompt>Defined CPA Threshold:</Prompt>
       <UsedInQuery>True</UsedInQuery>
     </ReportParameter>
     <ReportParameter Name="ToDay">

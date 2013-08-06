@@ -1662,7 +1662,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>  Ad Alerts Report</Value>
+                    <Value>  Ad Alerts</Value>
                     <Style>
                       <FontFamily>Tahoma</FontFamily>
                       <FontSize>18pt</FontSize>
@@ -1689,7 +1689,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>textbox1</rd:DefaultName>
-            <Top>0.01389in</Top>
+            <Top>0.02778in</Top>
             <Height>0.19444in</Height>
             <Width>17in</Width>
             <ZIndex>1</ZIndex>
@@ -1937,7 +1937,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
           <Value>30</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Time period (days ) </Prompt>
+      <Prompt>Defined Time Period:</Prompt>
     </ReportParameter>
     <ReportParameter Name="CPAThreshold">
       <DataType>String</DataType>
@@ -1946,7 +1946,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
           <Value>1.2</Value>
         </Values>
       </DefaultValue>
-      <Prompt>CPA Threshold </Prompt>
+      <Prompt>Defined CPA Threshold:</Prompt>
     </ReportParameter>
     <ReportParameter Name="CPRThreshold">
       <DataType>String</DataType>
@@ -1955,7 +1955,7 @@ WHERE     (AccountID = @Account_ID) AND (BaseMeasureID = 1)</CommandText>
           <Value>1.5</Value>
         </Values>
       </DefaultValue>
-      <Prompt>CPR Treshold</Prompt>
+      <Prompt>Defined CPR Threshold:</Prompt>
     </ReportParameter>
     <ReportParameter Name="AdgroupSpent">
       <DataType>String</DataType>

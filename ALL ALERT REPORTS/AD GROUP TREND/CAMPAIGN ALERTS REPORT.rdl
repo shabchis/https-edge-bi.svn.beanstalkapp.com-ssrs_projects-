@@ -500,7 +500,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Campaign Alerts Report</Value>
+                  <Value>Campaign Alerts</Value>
                   <Style>
                     <FontFamily>Tahoma</FontFamily>
                     <FontSize>18pt</FontSize>
@@ -649,7 +649,7 @@
         <DataSourceName>Campaign_DataSource</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@AccountID">
-            <Value>=Parameters!AccountID.Value</Value>
+            <Value>=Parameters!Account_ID.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@Period">
             <Value>=Parameters!Period.Value</Value>
@@ -661,7 +661,7 @@
             <Value>=Parameters!ToDay.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>EXEC CAMPAIGN_Alerts_Report 
+        <CommandText>EXEC Campaign_Alerts_Report_ssrs
 @AccountID, 
 @Period,
 @threshold, 
@@ -699,7 +699,7 @@
         <DataSourceName>Campaign_DataSource</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@Account_ID">
-            <Value>=Parameters!AccountID.Value</Value>
+            <Value>=Parameters!Account_ID.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandText>exec SP_GetAcqAndCpaFieldsNamesByAccountID @Account_ID</CommandText>
@@ -731,7 +731,7 @@
             <Value>=Parameters!MySession.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@Account_ID">
-            <Value>=Parameters!AccountID.Value</Value>
+            <Value>=Parameters!Account_ID.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandText>declare @result varchar(max) 
@@ -750,9 +750,10 @@ select @result</CommandText>
     </DataSet>
   </DataSets>
   <ReportParameters>
-    <ReportParameter Name="AccountID">
+    <ReportParameter Name="Account_ID">
       <DataType>Integer</DataType>
       <Prompt>Account ID</Prompt>
+      <Hidden>true</Hidden>
       <UsedInQuery>True</UsedInQuery>
     </ReportParameter>
     <ReportParameter Name="Period">
@@ -762,7 +763,7 @@ select @result</CommandText>
           <Value>30</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Period</Prompt>
+      <Prompt>Defined Time Period:</Prompt>
       <UsedInQuery>True</UsedInQuery>
     </ReportParameter>
     <ReportParameter Name="threshold">
@@ -772,7 +773,7 @@ select @result</CommandText>
           <Value>2</Value>
         </Values>
       </DefaultValue>
-      <Prompt>threshold</Prompt>
+      <Prompt>Defined Threshold:</Prompt>
     </ReportParameter>
     <ReportParameter Name="ToDay">
       <DataType>String</DataType>
@@ -782,10 +783,12 @@ select @result</CommandText>
         </Values>
       </DefaultValue>
       <Prompt>To Day</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="MySession">
       <DataType>String</DataType>
       <Prompt>Session</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="Validation">
       <DataType>String</DataType>
@@ -796,6 +799,7 @@ select @result</CommandText>
         </DataSetReference>
       </DefaultValue>
       <Prompt>Validation</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
